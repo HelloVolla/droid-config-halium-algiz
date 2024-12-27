@@ -1,6 +1,10 @@
-ro.product.vendor.brand=volla
+# Model for libdeviceinfo
 ro.product.vendor.device=algiz
-ro.product.manufacturer=Volla
+# Camera model for taken pictures
+ro.product.model=Volla Phone Quintus
+# MTP device name
+ro.product.vendor.model=Volla Phone Quintus
+# Manufacturer in host dmesg
 ro.product.vendor.manufacturer=Volla
-ro.product.model=Quintus
-ro.product.vendor.model=Quintus
+# urfkill expects this
+wifi.interface=wlan0
