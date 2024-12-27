@@ -1,15 +1,15 @@
-%package -n patterns-sailfish-device-adaptation-halium-vidofnir
-Summary: Sailfish HW Adaptation halium-vidofnir
+%package -n patterns-sailfish-device-adaptation-halium-algiz
+Summary: Sailfish HW Adaptation halium-algiz
 
-Requires: kernel-adaptation-halium-vidofnir
-Requires: droid-config-halium-vidofnir-sailfish
-Requires: droid-config-halium-vidofnir-pulseaudio-settings
-Requires: droid-config-halium-vidofnir-policy-settings
-Requires: droid-config-halium-vidofnir-preinit-plugin
-Requires: droid-config-halium-vidofnir-flashing
-Requires: droid-config-halium-vidofnir-bluez5
-Requires: droid-hal-vendor-img-halium-vidofnir
-Requires: droid-hal-version-halium-vidofnir
+Requires: kernel-adaptation-halium-algiz
+Requires: droid-config-halium-algiz-sailfish
+Requires: droid-config-halium-algiz-pulseaudio-settings
+Requires: droid-config-halium-algiz-policy-settings
+Requires: droid-config-halium-algiz-preinit-plugin
+Requires: droid-config-halium-algiz-flashing
+Requires: droid-config-halium-algiz-bluez5
+Requires: droid-hal-vendor-img-halium-algiz
+Requires: droid-hal-version-halium-algiz
 
 Requires: qt5-plugin-generic-evdev
 
@@ -93,7 +93,7 @@ Requires: geoclue-provider-hybris
 # For mounting SD card automatically
 Requires: sd-utils
 
-%description -n patterns-sailfish-device-adaptation-halium-vidofnir
-Pattern with packages for halium-vidofnir HW Adaptation
+%description -n patterns-sailfish-device-adaptation-halium-algiz
+Pattern with packages for halium-algiz HW Adaptation
 
-%files -n patterns-sailfish-device-adaptation-halium-vidofnir
+%files -n patterns-sailfish-device-adaptation-halium-algiz

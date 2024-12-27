@@ -10,7 +10,7 @@ part / --fstype="ext4" --size=8000 --label=root
 
 ## No suitable configuration found in /tmp/sandbox/usr/share/ssu/kickstart/bootloader
 
-repo --name=adaptation-community-vidofnir-@RELEASE@ --baseurl=http://repo.sailfishos.org/obs/nemo:/devel:/hw:/volla:/halium-vidofnir/sailfish_latest_@ARCH@/
+repo --name=adaptation-community-algiz-@RELEASE@ --baseurl=http://repo.sailfishos.org/obs/nemo:/devel:/hw:/volla:/halium-algiz/sailfish_latest_@ARCH@/
 repo --name=adaptation-community-halium12-@RELEASE@ --baseurl=http://repo.sailfishos.org/obs/nemo:/devel:/hw:/halium:/12/sailfish_latest_@ARCH@/
 repo --name=adaptation-community-common-halium-@RELEASE@ --baseurl=http://repo.sailfishos.org/obs/nemo:/devel:/hw:/common/sailfish_latest_@ARCH@/
 
@@ -21,14 +21,14 @@ repo --name=hotfixes-@RELEASE@ --baseurl=https://releases.jolla.com/releases/@RE
 repo --name=jolla-@RELEASE@ --baseurl=https://releases.jolla.com/releases/@RELEASE@/jolla/@ARCH@/
 
 %packages
-patterns-sailfish-device-configuration-halium-vidofnir
+patterns-sailfish-device-configuration-halium-algiz
 %end
 
 %attachment
 #Copy some files out of the image for the user to flash
 /boot/boot.img
 /etc/hw-release
-droid-config-halium-vidofnir-out-of-image-files
+droid-config-halium-algiz-out-of-image-files
 %end
 
 %pre

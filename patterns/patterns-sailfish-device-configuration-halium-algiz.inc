@@ -1,8 +1,8 @@
-%package -n patterns-sailfish-device-configuration-halium-vidofnir
-Summary: Sailfish HW Adaptation halium-vidofnir
+%package -n patterns-sailfish-device-configuration-halium-algiz
+Summary: Sailfish HW Adaptation halium-algiz
 
-Requires: patterns-sailfish-device-configuration-common-halium-vidofnir
-Requires: patterns-sailfish-device-adaptation-halium-vidofnir
+Requires: patterns-sailfish-device-configuration-common-halium-algiz
+Requires: patterns-sailfish-device-adaptation-halium-algiz
 
 Requires: patterns-sailfish-cellular-apps
 Requires: patterns-sailfish-applications
@@ -72,7 +72,7 @@ Recommends: zypper
 Recommends: strace
 Recommends: jolla-rnd-device
 
-%description -n patterns-sailfish-device-configuration-halium-vidofnir
-Pattern with packages for halium-vidofnir configurations
+%description -n patterns-sailfish-device-configuration-halium-algiz
+Pattern with packages for halium-algiz configurations
 
-%files -n patterns-sailfish-device-configuration-halium-vidofnir
+%files -n patterns-sailfish-device-configuration-halium-algiz
