@@ -1,4 +1,4 @@
-# DisplayName: Jolla dont_be_evil/@ARCH@ (release) 1
+# DisplayName: Jolla algiz/@ARCH@ (release) 1
 # KickstartType: release
 # SuggestedImageType: fs
 # SuggestedArchitecture: armv7hl
@@ -11,8 +11,8 @@ part / --fstype="ext4" --size=8000 --label=root
 ## No suitable configuration found in /tmp/sandbox/usr/share/ssu/kickstart/bootloader
 
 repo --name=adaptation-community-algiz-@RELEASE@ --baseurl=http://repo.sailfishos.org/obs/nemo:/devel:/hw:/volla:/halium-algiz/sailfish_latest_@ARCH@/
-repo --name=adaptation-community-halium12-@RELEASE@ --baseurl=http://repo.sailfishos.org/obs/nemo:/devel:/hw:/halium:/12/sailfish_latest_@ARCH@/
-repo --name=adaptation-community-common-halium-@RELEASE@ --baseurl=http://repo.sailfishos.org/obs/nemo:/devel:/hw:/common/sailfish_latest_@ARCH@/
+repo --name=adaptation-community-halium13-@RELEASE@ --baseurl=http://repo.sailfishos.org/obs/nemo:/devel:/hw:/halium:/13/sailfish_latest_@ARCH@/
+repo --name=adaptation-community-common-@RELEASE@ --baseurl=http://repo.sailfishos.org/obs/nemo:/devel:/hw:/common/sailfish_latest_@ARCH@/
 
 repo --name=sailfishos-chum-@RELEASE@ --baseurl=http://repo.sailfishos.org/obs/sailfishos:/chum/@RELEASE@_@ARCH@/
 repo --name=adaptation-common-@RELEASE@ --baseurl=https://releases.jolla.com/releases/@RELEASE@/jolla-hw/adaptation-common/@ARCH@/
@@ -101,32 +101,52 @@ fi
 ### end 70_sdk-domain
 
 ### Group_setup
+int_groupadd() {
+  name=$1
+  id=$2
+
+  if ! getent group $name; then
+        if getent group $id; then
+            other_name=$(getent group $id 2>/dev/null |cut -d":" -f1)
+            echo "Group $name did not exist yet, but another group has the same id ($id, $other_name), renaming that group"
+            groupmod -g $id -n $name $other_name || :
+        else
+            echo "Group $name did not exist yet"
+            groupadd -g $id $name || :
+        fi
+    else
+        echo "Group $name already existed, modifying it"
+        groupmod -g $id $name || :
+    fi
+}
+
 #Add Android groups/users
-groupadd system --gid     1000
-groupadd radio --gid      1001
-groupadd bluetooth --gid  1002
-groupadd graphics --gid   1003
-groupadd camera --gid     1006
-groupadd log --gid        1007
-groupadd compass --gid    1008
-groupadd mount --gid      1009
-groupadd wifi --gid       1010
-groupadd media --gid       1013
-groupadd dhcp --gid       1014
-groupadd adb --gid        1011
-groupadd install --gid    1012
-groupadd media --gid      1013
-groupadd drm --gid        1019
-groupadd gps --gid        1021
-groupadd nfc --gid        1027
-groupadd shell --gid      2000
-groupadd cache --gid      2001
-groupadd diag --gid       2002
-groupadd net_bt_admin --gid  3001
-groupadd net_bt --gid     3002
-groupadd inet --gid       3003
-groupadd net_raw --gid    3004
-groupadd misc --gid       9998
+int_groupadd system      1000
+int_groupadd radio       1001
+int_groupadd bluetooth   1002
+int_groupadd graphics    1003
+int_groupadd input       1004
+int_groupadd audio       1005
+int_groupadd camera      1006
+int_groupadd log         1007
+int_groupadd compass     1008
+int_groupadd mount       1009
+int_groupadd wifi        1010
+int_groupadd adb         1011
+int_groupadd install     1012
+int_groupadd media       1013
+int_groupadd dhcp        1014
+int_groupadd drm         1019
+int_groupadd gps         1021
+int_groupadd nfc         1027
+int_groupadd shell       2000
+int_groupadd cache       2001
+int_groupadd diag        2002
+int_groupadd net_bt_admin   3001
+int_groupadd net_bt      3002
+int_groupadd inet        3003
+int_groupadd net_raw     3004
+int_groupadd misc        9998
 
 useradd system --uid 1000 -g system -r -s /sbin/nologin
 useradd radio --uid 1001 -g radio -r -s /sbin/nologin

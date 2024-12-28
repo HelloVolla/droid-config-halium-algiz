@@ -15,7 +15,7 @@ ACTION=="add", SUBSYSTEM=="dma_heap", KERNEL=="system-uncached", OWNER="system",
 ACTION=="add", SUBSYSTEM=="dma_heap", KERNEL=="system-secure", OWNER="system", GROUP="system", MODE="0444"
 ACTION=="add", KERNEL=="dri/*", OWNER="root", GROUP="android_graphics", MODE="0666"
 ACTION=="add", KERNEL=="uhid", OWNER="uhid", GROUP="uhid", MODE="0660"
-ACTION=="add", KERNEL=="uinput", OWNER="uhid", GROUP="uhid", MODE="0660"
+ACTION=="add", KERNEL=="uinput", OWNER="root", GROUP="plugdev", MODE="0660"
 ACTION=="add", KERNEL=="rtc0", OWNER="system", GROUP="system", MODE="0640"
 ACTION=="add", KERNEL=="tty0", OWNER="root", GROUP="system", MODE="0660"
 ACTION=="add", KERNEL=="graphics/*", OWNER="root", GROUP="android_graphics", MODE="0660"
@@ -142,4 +142,3 @@ ACTION=="add", KERNEL=="hotknot", OWNER="root", GROUP="system", MODE="0660"
 ACTION=="add", KERNEL=="RT_Monitor", OWNER="system", GROUP="system", MODE="0660"
 ACTION=="add", KERNEL=="kick_powerkey", OWNER="system", GROUP="system", MODE="0660"
 ACTION=="add", KERNEL=="ttyACM0", OWNER="radio", GROUP="radio", MODE="0660"
-
