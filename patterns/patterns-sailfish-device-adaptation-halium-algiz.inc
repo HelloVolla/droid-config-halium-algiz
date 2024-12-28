@@ -1,7 +1,7 @@
 %package -n patterns-sailfish-device-adaptation-halium-algiz
 Summary: Sailfish HW Adaptation halium-algiz
 
-Requires: kernel-adaptation-halium-algiz
+#Requires: kernel-adaptation-halium-algiz
 Requires: droid-config-halium-algiz-sailfish
 Requires: droid-config-halium-algiz-pulseaudio-settings
 Requires: droid-config-halium-algiz-policy-settings
