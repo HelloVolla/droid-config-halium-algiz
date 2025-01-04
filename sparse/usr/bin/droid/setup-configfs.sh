@@ -2,7 +2,7 @@
 
 #Set up configfs as we are not using droid-boot init-script
 
-USB_FUNCTIONS=ecm,mtp
+USB_FUNCTIONS=eem,mtp
 GADGET_DIR=/sys/kernel/config/usb_gadget
 
 # Sugar for accessing usb config
@@ -18,7 +18,7 @@ write $GADGET_DIR/g1/strings/0x409/serialnumber "$1"
 write $GADGET_DIR/g1/strings/0x409/manufacturer "Halium"
 write $GADGET_DIR/g1/strings/0x409/product      "Halium Device"
 
-if echo $USB_FUNCTIONS | grep -q "ecm"; then
+if echo $USB_FUNCTIONS | grep -q "eem"; then
     mkdir $GADGET_DIR/g1/functions/ecm.usb0
 fi
 echo $USB_FUNCTIONS | grep -q "mass_storage" && mkdir $GADGET_DIR/g1/functions/storage.0
@@ -28,9 +28,9 @@ mkdir $GADGET_DIR/g1/configs/b.1
 mkdir $GADGET_DIR/g1/configs/b.1/strings/0x409
 write $GADGET_DIR/g1/configs/b.1/strings/0x409/configuration "$USB_FUNCTIONS"
 
-if echo $USB_FUNCTIONS | grep -q "ecm"; then
-    ln -s $GADGET_DIR/g1/functions/ecm.usb0 $GADGET_DIR/g1/configs/b.1
+if echo $USB_FUNCTIONS | grep -q "eem"; then
+    ln -s $GADGET_DIR/g1/functions/eem.usb0 $GADGET_DIR/g1/configs/b.1
 fi
 echo $USB_FUNCTIONS | grep -q "mass_storage" && ln -s $GADGET_DIR/g1/functions/storage.0 $GADGET_DIR/g1/configs/b.1
 
-echo "$(ls /sys/class/udc/*)" > $GADGET_DIR/g1/UDC
+echo "$(ls /sys/class/udc)" > $GADGET_DIR/g1/UDC
