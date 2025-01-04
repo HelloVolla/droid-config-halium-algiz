@@ -6,8 +6,6 @@ After=bluebinder.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/sbin/modprobe wlan_drv_gen4m_6789
-ExecStart=/sbin/modprobe fmradio_drv_mt6631_6635
 ExecStart=/usr/bin/droid/enable-wifi.sh
 ExecStop=/usr/bin/droid/disable-wifi.sh
 
