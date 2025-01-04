@@ -12,7 +12,7 @@ Requires: patterns-sailfish-ui
 # brought up (useful during development, available since update10)
 Requires: jolla-rnd-device
 
-Requires: sailfish-content-graphics-z1.0
+Requires: sailfish-content-graphics-z1.5
 
 # For NFC
 Requires: jolla-settings-system-nfc
