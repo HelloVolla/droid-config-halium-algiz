@@ -1,7 +1,7 @@
 [Unit]
 Description=Load wlan module
 Conflicts=shutdown.target actdead.target
-After=bluebinder.service
+Before=bluebinder.service
 
 [Service]
 Type=oneshot
