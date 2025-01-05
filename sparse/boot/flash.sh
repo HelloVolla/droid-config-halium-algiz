@@ -19,7 +19,7 @@ $(tput setaf 220)Be aware, the flashing process might take up to 10 minutes.
 The screen is expected to go black. This is fine, flashing continues.$(tput sgr0)
 "
 
-fastboot $* getvar product 2>&1 | grep "^product: *k6789v1_64"
+fastboot $* getvar product 2>&1 | grep "^product: *k6877v1_64_k419"
 if [ $? -ne 0 ] ; then
 	echo "$(tput setaf 1)Mismatched image and device$(tput sgr0)";
 	exit 1;
@@ -33,9 +33,6 @@ handle_error()
 
 #Flash kernel and init
 fastboot flash boot_a boot.img || handle_error flash boot_a error
-
-#Vendor boot
-fastboot flash vendor_boot_a vendor_boot.img || handle_error flash vendor_boot_a error
 
 #Flash super
 fastboot flash super super.img || handle_error flash super error
