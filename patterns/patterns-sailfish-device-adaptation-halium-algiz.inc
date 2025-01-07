@@ -40,7 +40,6 @@ Requires: nfcd-mce-plugin
 Requires: libgbinder-tools
 
 # Vibra
-Requires: ngfd-plugin-native-vibrator
 Requires: libngf-qt5-qtfeedback
 
 # Sensors
