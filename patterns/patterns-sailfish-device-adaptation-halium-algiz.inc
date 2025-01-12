@@ -40,6 +40,7 @@ Requires: nfcd-mce-plugin
 Requires: libgbinder-tools
 
 # Vibra
+Requires: ngfd-plugin-droid-vibrator
 Requires: libngf-qt5-qtfeedback
 
 # Sensors
