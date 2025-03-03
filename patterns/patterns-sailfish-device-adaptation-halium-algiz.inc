@@ -32,6 +32,7 @@ Requires: bluebinder
 
 # Ofono
 Requires: ofono-binder-plugin
+Requires: ofono-binder-plugin-ext-mtk
 Requires: dummy_netd
 
 # NFC
