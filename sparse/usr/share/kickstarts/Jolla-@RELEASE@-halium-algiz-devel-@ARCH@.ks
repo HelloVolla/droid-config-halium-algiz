@@ -101,6 +101,7 @@ fi
 ### end 70_sdk-domain
 
 ### Group_setup
+
 int_groupadd() {
   name=$1
   id=$2
