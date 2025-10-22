@@ -1,0 +1,9 @@
+CPUCHECK_STRING="MT6877V/TTZA"
+
+# Because of flash-partition checks, 1 needs to be defined
+# Others can go with partition numbers
+PART_1="boot_a"
+
+PART_REAL_1="sdc32"
+
+PART_I="1"
