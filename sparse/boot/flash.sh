@@ -40,6 +40,17 @@ fastboot flash super super.img || handle_error flash super error
 #Set slot a
 fastboot set_active a || fastboot --set-active=a
 
+# Warn about formatting user data
+echo "
+$(tput setaf 2)Formatting userdata is required for normal operation the first time sailfish is installed.$(tput sgr0)
+$(tput setaf 220)You can skip this if it has previously been done.  Formatting will remove your home data.$(tput sgr0)
+$(tput setaf 220)Format userdata? [y/n] $(tput sgr0)
+"
+read -rsn1 input
+if [ "$input" == "y" ] ; then
+    fastboot format:ext4 userdata || handle_error format userdata error
+fi
+
 echo "
 $(tput setaf 2)Flashing process successful.$(tput sgr0)
 $(tput setaf 220)Reboot now? [Y/n] $(tput sgr0)
