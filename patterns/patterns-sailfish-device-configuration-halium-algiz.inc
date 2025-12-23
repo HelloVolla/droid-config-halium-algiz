@@ -50,6 +50,7 @@ Requires: sailfish-devicelock-fpd
 
 #WLAN
 Requires: sailfish-connman-plugin-tethering-wmtwifi
+Requires: sailfish-connman-plugin-suspend
 
 #Debug tools
 Recommends: vi
