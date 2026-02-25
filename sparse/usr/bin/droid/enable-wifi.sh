@@ -1,4 +1,22 @@
 #!/bin/bash
+# Possible values for /dev/wmtWifi
+# 0 Power Off
+# 1 Power On
+# S Station/P2P mode
+# P Also Station/P2P mode
+# A AP mode
+# C Concurrent mode
+# N Disable concurrent mode
+# D Dual P2P mode
+# E Dual AP mode
+# LLM0x9999 Low Latency
+# WR-BUF:NVRAM
+# WR-BUF:DRVCFG
+# WR-BUF:FWCFG
+# RM-BUF:DRVCFG
+# RM-BUF:FWCFG
+# Newer devices als have
+# 2 Test mode
 
 
 # Wait for the property system to be up.
@@ -30,7 +48,7 @@ while [ ! -c /dev/wmtWifi ]; do sleep 0.2; done
 sleep 1
 
 # Finally enable the adapter in station mode
-echo P > /dev/wmtWifi
+echo S > /dev/wmtWifi
 
 
 # Enable WoWLAN to avoid network disconnect before suspend
