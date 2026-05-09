@@ -41,7 +41,6 @@ Requires: nfcd-mce-plugin
 Requires: libgbinder-tools
 
 # Vibra
-Requires: ngfd-plugin-droid-vibrator
 Requires: libngf-qt5-qtfeedback
 
 # Sensors
@@ -90,9 +89,6 @@ Requires: sailfish-device-encryption-community-droid
 
 # For GPS
 Requires: geoclue-provider-hybris
-
-# For mounting SD card automatically
-Requires: sd-utils
 
 %description -n patterns-sailfish-device-adaptation-halium-algiz
 Pattern with packages for halium-algiz HW Adaptation
