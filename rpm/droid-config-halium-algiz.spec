@@ -12,6 +12,8 @@
 
 %define out_of_image_files 1
 
+%define disable_tools 1
+
 # Sailfish OS is considered to-scale, if in the App Grid you get 4-in-a-row icons,
 # and 2-in-a-row or 3-in-a-row app covers in the Home Screen, depending on
 # how many apps are open.
@@ -23,7 +25,6 @@
 Provides: ofono-configs-binder
 Provides: ofono-configs
 Requires: droid-config-halium
-Provides: droid-hal-tools
 AutoReqProv: no
 
 %define ofono_enable_plugins bluez5,hfp_ag_bluez5
