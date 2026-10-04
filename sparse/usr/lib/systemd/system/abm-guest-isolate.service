@@ -1,0 +1,16 @@
+[Unit]
+Description=Isolate host persist and metadata on ABM guest boot
+DefaultDependencies=no
+After=mount-android.service
+Before=droid-hal-init.service
+ConditionKernelCommandLine=ABM.bootloader=1
+ConditionKernelCommandLine=|datapart
+ConditionKernelCommandLine=|systempart
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/droid/abm-guest-isolate.sh
+
+[Install]
+WantedBy=droid-hal-init.service
