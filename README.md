@@ -1,4 +1,4 @@
-#droid-config-halium-algiz
+# droid-config-halium-algiz
 
 This project contains the device specific configuration for the Volla Quintus on SailfishOS
 
