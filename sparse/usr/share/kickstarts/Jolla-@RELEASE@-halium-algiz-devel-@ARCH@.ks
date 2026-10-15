@@ -14,7 +14,7 @@ repo --name=adaptation-community-algiz-@RELEASE@ --baseurl=http://repo.sailfisho
 repo --name=adaptation-community-halium13-@RELEASE@ --baseurl=http://repo.sailfishos.org/obs/nemo:/devel:/hw:/halium:/13/sailfish_latest_@ARCH@/
 repo --name=adaptation-community-common-@RELEASE@ --baseurl=http://repo.sailfishos.org/obs/nemo:/devel:/hw:/common/sailfish_latest_@ARCH@/
 
-repo --name=sailfishos-chum-@RELEASE@ --baseurl=http://repo.sailfishos.org/obs/sailfishos:/chum/@RELEASE@_@ARCH@/
+repo --name=sailfishos-chum-@RELEASE@ --baseurl=http://repo.sailfishos.org/obs/sailfishos:/chum/@RELEASEMAJMIN@_@ARCH@/
 repo --name=adaptation-common-@RELEASE@ --baseurl=https://releases.jolla.com/releases/@RELEASE@/jolla-hw/adaptation-common/@ARCH@/
 repo --name=apps-@RELEASE@ --baseurl=https://releases.jolla.com/jolla-apps/@RELEASE@/@ARCH@/
 repo --name=hotfixes-@RELEASE@ --baseurl=https://releases.jolla.com/releases/@RELEASE@/hotfixes/@ARCH@/
