@@ -27,6 +27,7 @@ patterns-sailfish-device-configuration-halium-algiz
 %attachment
 #Copy some files out of the image for the user to flash
 /boot/boot.img
+/boot/dtbo.img
 /etc/hw-release
 droid-config-halium-algiz-out-of-image-files
 %end
