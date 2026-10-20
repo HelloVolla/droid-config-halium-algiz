@@ -34,6 +34,9 @@ handle_error()
 #Flash kernel and init
 fastboot flash boot_a boot.img || handle_error flash boot_a error
 
+#DTBO
+fastboot flash dtbo_a dtbo.img || handle_error flash dtbo_a error
+
 #Flash super
 fastboot flash super super.img || handle_error flash super error
 
